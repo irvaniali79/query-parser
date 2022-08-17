@@ -1,0 +1,19 @@
+{
+  "name": "query_parser_rex",
+  "version": "1.0.3",
+  "description": "a package to retrive paramaters from GET methods",
+  "main": "index.js",
+  "repository": "https://github.com/okabe-rintaru/query-parser",
+  "homepage": "https://github.com/okabe-rintaru",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "parser",
+    "string",
+    "url",
+    "GET"
+  ],
+  "author": "irvaniali79@gmail.com",
+  "license": "MIT"
+}
