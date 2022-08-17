@@ -12,8 +12,19 @@ function queryParser(url){
 
     for(let i=1;i<=params.length-1;i++){
        
-        let leftparam = REleft.exec(params[i-1])[0].slice(1);
+        let leftparam = REleft.exec(params[i-1])[0];
+
         let rightparam = REright.exec(params[i])[0];
+
+        if (leftparam.includes('&') ){
+            leftparam = leftparam.slice(leftparam.indexOf("&")+1)
+        }
+        else if (leftparam.includes('?')){
+            leftparam = leftparam.slice(leftparam.indexOf("?")+1)
+        }
+
+
+
         if (rightparam.includes('&') ){
             rightparam = rightparam.slice(0,rightparam.indexOf("&"))
         }
@@ -27,7 +38,7 @@ function queryParser(url){
     return Object.fromEntries(result);
 }   
 
-// queryParser("www.google.com/?par&am=&234&&name=asghar&age=22?=year?")
+
 
 
 
